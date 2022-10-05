@@ -1,7 +1,24 @@
+import { useEffect, useState } from "react";
 import "./App.css";
+import About from "./component/About";
+import Root from "./component/Root";
 
 function App() {
-  return <div className="App"></div>;
+  const [page, setPage] = useState("");
+
+  return (
+    <main>
+      <button onClick={() => window.history.pushState("root", "root Title", "/")}>Root</button>
+      <button onClick={() => window.history.pushState("about", "about Title", "/about")}>
+        About
+      </button>
+      <section>
+        {!page && <p>Home!</p>}
+        {page === "root" && <Root />}
+        {page === "about" && <About />}
+      </section>
+    </main>
+  );
 }
 
 export default App;
