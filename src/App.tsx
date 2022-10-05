@@ -6,6 +6,11 @@ import Root from "./component/Root";
 function App() {
   const [page, setPage] = useState("");
 
+  //뒤로가기 기능
+  window.onpopstate = function (event) {
+    console.log(`location : ${document.location}, state : ${event.state}`);
+  };
+
   return (
     <main>
       <button onClick={() => window.history.pushState("root", "root Title", "/")}>Root</button>
