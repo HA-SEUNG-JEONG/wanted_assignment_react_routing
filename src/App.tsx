@@ -9,6 +9,7 @@ function App() {
   //뒤로가기 기능
   window.onpopstate = function (event) {
     console.log(`location : ${document.location}, state : ${event.state}`);
+    setPage(event.state);
   };
 
   return (
