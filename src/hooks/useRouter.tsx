@@ -1,6 +1,6 @@
 const useRouter = () => {
-  const router = window.location.pathname;
-  return { router };
+  const push = window.location.pathname;
+  return { push };
 };
 
 export default useRouter;
