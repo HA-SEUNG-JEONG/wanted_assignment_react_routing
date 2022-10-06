@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 const useRouter = () => {
   const path = window.location.pathname;
   const push = (data: string, url: string) => {
